@@ -29,7 +29,7 @@
       },
 
       "minecraft:movement": {
-        "value": 0.25
+        "value": 5
       },
       "minecraft:navigation.walk": {
         "can_path_over_water": true
@@ -41,8 +41,8 @@
       "minecraft:can_climb": {
       },
       "minecraft:health": {
-        "value": 8,
-        "max": 8
+        "value": 80,
+        "max": 80
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -64,14 +64,14 @@
       },
 
       "minecraft:behavior.melee_attack": {
-        "priority": 3,
+        "priority": 1,
         "track_target": true
       },
 
       "minecraft:behavior.nearest_attackable_target": {
-        "priority": 5,
-        "must_see": true,
-        "within_radius": 16.0,
+        "priority": 1,
+        "must_see": false,
+        "within_radius": 160.0,
         "entity_types": [
           {
             "filters": {
@@ -88,7 +88,7 @@
                 }
               ]
             },
-            "max_dist": 16
+            "max_dist": 160
           }
         ]
       },
