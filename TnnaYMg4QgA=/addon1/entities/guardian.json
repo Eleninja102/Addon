@@ -35,7 +35,7 @@
           }
         },
         "minecraft:behavior.guardian_attack": {
-          "priority": 4
+          "priority": 1
         }
       },
 
@@ -75,8 +75,8 @@
         "height": 0.85
       },
       "minecraft:health": {
-        "value": 30,
-        "max": 30
+        "value": 50,
+        "max": 50
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -94,11 +94,11 @@
         "value": 0.12
       },
       "minecraft:attack": {
-        "damage": 5
+        "damage": 6
       },
       "minecraft:follow_range": {
-        "value": 16,
-        "max": 16
+        "value": 160,
+        "max": 160
       },
       "minecraft:navigation.generic": {
         "is_amphibious": true,
@@ -121,7 +121,7 @@
         "despawn_from_distance": {}
       },
       "minecraft:home": {
-        "restriction_radius": 16
+        "restriction_radius": 160
       },
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 1,
@@ -133,7 +133,7 @@
                 { "test" :  "is_family", "subject" : "other", "value" :  "squid"}
               ] 
             },
-            "max_dist": 16
+            "max_dist": 160
           }
         ],
         "attack_interval_min": 1.0,
@@ -148,7 +148,7 @@
         }
       },
       "minecraft:behavior.guardian_attack": {
-        "priority": 4
+        "priority": 1
       },
      "minecraft:behavior.move_towards_home_restriction": {
         "priority": 5,
