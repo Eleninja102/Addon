@@ -15,7 +15,7 @@
             "remove_on_hit": { }
           },
           "power": 1.5,
-          "gravity": 0.025,
+          "gravity": 0.0000001,
           "angle_offset": 0.0,
           "inertia": 1,
           "liquid_inertia": 1
@@ -32,14 +32,14 @@
         "on_hit": {
           "teleport_owner": { },
           "spawn_chance": {
-            "first_spawn_percent_chance": 5.0,
-            "first_spawn_count": 1,
+            "first_spawn_percent_chance": 50.0,
+            "first_spawn_count": 5,
             "spawn_definition": "minecraft:endermite"
           },
           "remove_on_hit": { }
         },
         "power": 1.5,
-        "gravity": 0.025,
+        "gravity": 0.0000001,
         "angle_offset": 0.0,
         "inertia": 1,
         "liquid_inertia": 1
