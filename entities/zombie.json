@@ -146,8 +146,8 @@
       "minecraft:can_climb": {
       },
       "minecraft:health": {
-        "value": 40,
-        "max": 40
+        "value": 45,
+        "max": 45
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -166,18 +166,8 @@
       },
       "minecraft:attack": {
         "damage": 4,
-        "effect_name": "slowness",
+        "effect_name": ["poison", "blindness","hunger"],
         "effect_duration": 20
-      },
-      "minecraft:attack": {
-        "damage": 4,
-        "effect_name": "blindness",
-        "effect_duration": 10
-      },  
-      "minecraft:attack": {
-        "damage": 4,
-        "effect_name": "hunger",
-        "effect_duration": 30
       },
       "minecraft:loot": {
         "table": "loot_tables/entities/zombie.json"

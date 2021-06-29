@@ -41,7 +41,7 @@
         "minecraft:transformation": {
           "into": "minecraft:zombie<minecraft:as_adult>",
           "transformation_sound": "convert_to_drowned",
-          "drop_equipment": true,
+          "drop_equipment": false,
           "delay": {
             "value": 15
           }
@@ -54,7 +54,7 @@
         "minecraft:transformation": {
           "into": "minecraft:zombie<minecraft:as_baby>",
           "transformation_sound": "convert_to_drowned",
-          "drop_equipment": true,
+          "drop_equipment": false,
           "delay": {
             "value": 15
           }
@@ -72,7 +72,7 @@
           "value": 0.53125
         },
         "minecraft:movement": {
-          "value": 0.35
+          "value": 0.5
         }
       },
 
@@ -107,7 +107,7 @@
       "minecraft:zombie_husk_jockey": {
         "minecraft:behavior.find_mount": {
           "priority": 1,
-          "within_radius": 16
+          "within_radius": 160
         }
       }
     },
@@ -141,8 +141,8 @@
       },
 
       "minecraft:health": {
-        "value": 20,
-        "max": 20
+        "value": 50,
+        "max": 50
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -160,7 +160,7 @@
       },
       "minecraft:attack": {
         "damage": 3,
-        "effect_name": "hunger",
+        "effect_name": "poison",
         "effect_duration": 30
       },
       "minecraft:variant": {
@@ -409,7 +409,7 @@
       },
       // Zombie_husk Behaviors
       "minecraft:behavior.equip_item": {
-        "priority": 2
+        "priority": 1
       },
       "minecraft:behavior.melee_attack": {
         "priority": 3
@@ -423,11 +423,11 @@
         "interval": 20
       },
       "minecraft:behavior.pickup_items": {
-        "priority": 6,
-        "max_dist": 3,
-        "goal_radius": 2,
-        "speed_multiplier": 1.0,
-        "pickup_based_on_chance": true,
+        "priority": 1,
+        "max_dist": 300,
+        "goal_radius": 20,
+        "speed_multiplier": 10.0,
+        "pickup_based_on_chance": false,
         "can_pickup_any_item": true
       },
       "minecraft:behavior.random_stroll": {
@@ -447,7 +447,7 @@
       },
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 2,
-        "must_see": true,
+        "must_see": false,
         "reselect_targets": true,
         "within_radius": 25.0,
         "entity_types": [

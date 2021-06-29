@@ -94,8 +94,8 @@
           "table": "loot_tables/entities/pig_saddled.json"
         },
         "minecraft:boostable": {
-          "speed_multiplier": 2.0,
-          "duration": 3.0,
+          "speed_multiplier": 4.0,
+          "duration": 5.0,
           "boost_items": [
             {
               "item": "carrotOnAStick",
@@ -157,8 +157,8 @@
       "minecraft:nameable": {
       },
       "minecraft:health": {
-        "value": 10,
-        "max": 10
+        "value": 30,
+        "max": 30
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -208,9 +208,13 @@
       "minecraft:behavior.float": {
         "priority": 2
       },
-      "minecraft:behavior.panic": {
-        "priority": 3,
-        "speed_multiplier": 1.25
+      "minecraft:behavior.melee_attack": {
+        "priority": 1
+      },
+      "minecraft:attack": {
+        "damage": 3,
+        "effect_name": "weakness",
+        "effect_duration": 20
       },
       "minecraft:behavior.tempt": {
         "priority": 5,
@@ -233,6 +237,44 @@
       },
       "minecraft:behavior.random_look_around": {
         "priority": 9
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 1,
+        "must_see": false,
+        "reselect_targets": true,
+        "within_radius": 25.0,
+        "must_see_forget_duration": 17.0,
+        "entity_types": [
+          {
+            "filters": {
+              "any_of": [
+                { "test": "is_family", "subject": "other", "value": "player" },
+                { "test": "is_family", "subject": "other", "value": "snowgolem" },
+                { "test": "is_family", "subject": "other", "value": "irongolem" }
+              ]
+            },
+            "max_dist": 35
+          },
+          {
+            "filters": {
+              "any_of": [
+                { "test": "is_family", "subject": "other", "value": "villager" },
+                { "test": "is_family", "subject": "other", "value": "wandering_trader" }
+              ]
+            },
+            "max_dist": 350,
+            "must_see": false
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "is_family", "subject": "other", "value": "baby_turtle" },
+                { "test": "in_water", "subject": "other", "operator": "!=", "value": true }
+              ]
+            },
+            "max_dist": 35
+          }
+        ]
       },
 	    "minecraft:physics": {
       },

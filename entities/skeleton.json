@@ -94,12 +94,12 @@
       "minecraft:ranged_attack": {
         "minecraft:behavior.ranged_attack": {
           "priority": 0,
-          "attack_interval_min": 1.0,
-          "attack_interval_max": 3.0,
-          "attack_radius": 15.0
+          "attack_interval_min": 0.5,
+          "attack_interval_max": 1.0,
+          "attack_radius": 30.0
         },
         "minecraft:shooter": {
-          "def": "minecraft:arrow"
+          "def": "minecraft:small_fireball"
         },
         "minecraft:environment_sensor": {
           "triggers": [
@@ -140,7 +140,7 @@
           "speed_multiplier": 1.25
         },
         "minecraft:attack": {
-          "damage": 3
+          "damage": 5
         },
         "minecraft:environment_sensor": {
           "triggers": [
@@ -197,13 +197,9 @@
         "suffocate_time": 0,
         "breathes_water": true
       },
-
-      "minecraft:burns_in_daylight": {
-      },
-
       "minecraft:health": {
-        "value": 20,
-        "max": 20
+        "value": 25,
+        "max": 25
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -218,11 +214,11 @@
         "table": "loot_tables/entities/skeleton.json"
       },
       "minecraft:movement": {
-        "value": 0.25
+        "value": 0.4
       },
       "minecraft:navigation.walk": {
         "is_amphibious": true,
-        "avoid_sun": true,
+        "avoid_sun": false,
         "avoid_water": true
       },
       "minecraft:movement.basic": {
@@ -237,7 +233,7 @@
         "table": "loot_tables/entities/skeleton_gear.json"
       },
       "minecraft:shooter": {
-        "def": "minecraft:arrow"
+        "def": "minecraft:small_fireball"
       },
       "minecraft:environment_sensor": {
         "triggers": [
@@ -489,9 +485,9 @@
       },
       "minecraft:behavior.ranged_attack": {
         "priority": 0,
-        "attack_interval_min": 1.0,
-        "attack_interval_max": 3.0,
-        "attack_radius": 15.0
+        "attack_interval_min": 0.5,
+        "attack_interval_max": 1.0,
+        "attack_radius": 30.0
       },
       "minecraft:behavior.hurt_by_target": {
         "priority": 1
@@ -507,7 +503,7 @@
               "subject": "other",
               "value": "player"
             },
-            "max_dist": 16
+            "max_dist": 160
           },
           {
             "filters": {
@@ -537,12 +533,8 @@
           }
         ]
       },
-      "minecraft:behavior.flee_sun": {
-        "priority": 2,
-        "speed_multiplier": 1
-      },
       "minecraft:behavior.equip_item": {
-        "priority": 3
+        "priority": 1
       },
       "minecraft:behavior.avoid_mob_type": {
         "priority": 4,
@@ -560,11 +552,11 @@
         ]
       },
       "minecraft:behavior.pickup_items": {
-        "priority": 5,
-        "max_dist": 3,
-        "goal_radius": 2,
-        "speed_multiplier": 1.0,
-        "pickup_based_on_chance": true,
+        "priority": 1,
+        "max_dist": 300,
+        "goal_radius": 20,
+        "speed_multiplier": 10.0,
+        "pickup_based_on_chance": false,
         "can_pickup_any_item": true
       },
       "minecraft:behavior.random_stroll": {

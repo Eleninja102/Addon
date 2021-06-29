@@ -16,7 +16,7 @@
 
     "on_hit": {
       "impact_damage": {
-        "damage": 5,
+        "damage": 6,
         "knockback": false,
         "catch_fire": true,
         "semi_random_diff_damage": false
