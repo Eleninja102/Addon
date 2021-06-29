@@ -46,7 +46,7 @@
           "breed_items": "wheat",
           "breeds_with": {
             "mate_type": "minecraft:cow",
-            "baby_type": "minecraft:cow",
+            "baby_type": "minecraft:creeper",
             "breed_event": {
               "event": "minecraft:entity_born",
               "target": "baby"
@@ -103,8 +103,8 @@
       "minecraft:nameable": {
       },
       "minecraft:health": {
-        "value": 10,
-        "max": 10
+        "value": 50,
+        "max": 50
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
