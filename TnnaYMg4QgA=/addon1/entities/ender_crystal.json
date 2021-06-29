@@ -13,8 +13,8 @@
         "minecraft:explode": {
           "fuse_length": 0,
           "fuse_lit": true,
-          "power": 6,
-          "causes_fire": false,
+          "power": 12,
+          "causes_fire": true,
           "destroy_affected_by_griefing": true
         }
       }
@@ -26,8 +26,8 @@
         "height": 0.98
       },
       "minecraft:health": {
-        "value": 1,
-        "max": 1
+        "value": 20,
+        "max": 20
       },
       "minecraft:fire_immune": true,
       "minecraft:on_hurt": {
