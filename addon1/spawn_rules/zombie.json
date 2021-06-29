@@ -22,8 +22,8 @@
           "default": 100
         },
         "minecraft:herd": {
-          "min_size": 2,
-          "max_size": 4
+          "min_size": 4,
+          "max_size": 15
         },
         "minecraft:permute_type": [
           {
