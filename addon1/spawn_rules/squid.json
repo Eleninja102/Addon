@@ -16,8 +16,8 @@
           "surface": 4
         },
         "minecraft:herd": {
-          "min_size": 2,
-          "max_size": 4
+          "min_size": 12,
+          "max_size": 50
         },
 
         "minecraft:biome_filter": {
@@ -34,8 +34,8 @@
           "surface": 2
         },
         "minecraft:herd": {
-          "min_size": 2,
-          "max_size": 4
+          "min_size": 12,
+          "max_size": 50
         },
 
         "minecraft:biome_filter": {
