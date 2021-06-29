@@ -21,8 +21,8 @@
         "height": 0.3
       },
       "minecraft:health": {
-        "value": 6,
-        "max": 6
+        "value": 10,
+        "max": 10
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -37,27 +37,39 @@
         "table": "loot_tables/entities/fish.json"
       },
       "minecraft:scale": {
-        "value": 1.0
+        "value": 5.0
       },
       "minecraft:breathable": {
         "total_supply": 15,
         "suffocate_time": 0,
-        "breathes_air": false,
+        "breathes_air": true,
         "breathes_water": true
       },
       "minecraft:movement": {
-        "value": 0.1
+        "value": 0.15
       },
       "minecraft:underwater_movement": {
-        "value": 0.1
+        "value": 0.5
       },
       "minecraft:navigation.generic": { // Allows the mob to go through water
-        "is_amphibious": false,
+        "is_amphibious": true,
         "can_path_over_water": false,
         "can_swim": true,
-        "can_walk": false,
+        "can_walk": true,
         "can_breach": false,
         "can_sink": false
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true
+      },
+      "minecraft:movement.basic": {
+
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:can_climb": {
       },
       "minecraft:physics": {
         "has_gravity": false
@@ -82,7 +94,7 @@
       },
       "minecraft:behavior.random_swim": { // Randomly selects points to go to, even in water
         "priority": 3,
-        "speed_multiplier": 1.0,
+        "speed_multiplier": 2.0,
         "xz_dist": 16,
         "y_dist": 4,
         "interval": 0
@@ -91,7 +103,7 @@
         "priority": 4,
         "interval": 0.1,
         "look_ahead": 2.0,
-        "speed_multiplier": 1.0,
+        "speed_multiplier": 2.0,
         "wander_time": 5.0
       },
       "minecraft:behavior.avoid_mob_type": {
