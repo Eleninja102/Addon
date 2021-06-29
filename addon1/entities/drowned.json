@@ -17,10 +17,10 @@
           "value": 0.5
         },
         "minecraft:movement": {
-          "value": 0.25
+          "value": 1
         },
         "minecraft:underwater_movement": {
-          "value": 0.08
+          "value": 1
         }
       },
 
@@ -62,22 +62,24 @@
           "def": "minecraft:thrown_trident"
         },
         "minecraft:behavior.ranged_attack": {
-          "priority": 3,
-          "attack_interval_min": 1.0,
-          "attack_interval_max": 3.0,
-          "attack_radius": 10.0,
+          "priority": 1,
+          "attack_interval_min": 0.5,
+          "attack_interval_max": 1.0,
+          "attack_radius": 100.0,
           "swing": true
         }
       },
 
       "minecraft:melee_mode": {
         "minecraft:attack": {
-          "damage": 3
+          "damage": 4,
+          "effect_name": "slowness",
+          "effect_duration": 15
         },
         "minecraft:behavior.melee_attack": {
-          "priority": 3,
-          "speed_multiplier": 1,
-          "track_target": false,
+          "priority": 1,
+          "speed_multiplier": 10,
+          "track_target": true,
           "require_complete_path": true
         },
         "minecraft:equipment": {
@@ -131,7 +133,7 @@
       "minecraft:annotation.break_door": {
       },
       "minecraft:underwater_movement": {
-        "value": 0.06
+        "value": 1
       },
       "minecraft:movement.generic": {
       },
@@ -140,8 +142,8 @@
       "minecraft:can_climb": {
       },
       "minecraft:health": {
-        "value": 20,
-        "max": 20
+        "value": 25,
+        "max": 25
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -153,7 +155,7 @@
         ]
       },
       "minecraft:movement": {
-        "value": 0.23
+        "value": 1
       },
       "minecraft:burns_in_daylight": {
       },
@@ -399,7 +401,7 @@
         "speed_multiplier": 1
       },
       "minecraft:behavior.equip_item": {
-        "priority": 3
+        "priority": 1
       },
       "minecraft:behavior.stomp_turtle_egg": {
         "priority": 4,
@@ -410,11 +412,11 @@
         "interval": 20
       },
       "minecraft:behavior.pickup_items": {
-        "priority": 6,
-        "max_dist": 3,
-        "goal_radius": 2,
-        "speed_multiplier": 1.0,
-        "pickup_based_on_chance": true,
+        "priority": 1,
+        "max_dist": 30,
+        "goal_radius": 20,
+        "speed_multiplier": 10.0,
+        "pickup_based_on_chance": false,
         "can_pickup_any_item": true
       },
       "minecraft:behavior.random_stroll": {
@@ -433,10 +435,10 @@
         "priority": 1
       },
       "minecraft:behavior.nearest_attackable_target": {
-        "priority": 2,
+        "priority": 1,
         "reselect_targets": true,
-        "must_see": true,
-        "within_radius": 12.0,
+        "must_see": false,
+        "within_radius": 360.0,
         "must_see_forget_duration": 17.0,
         "persist_time": 0.5,
         "entity_types": [
@@ -458,7 +460,7 @@
                 }
               ]
             },
-            "max_dist": 20
+            "max_dist": 200
           },
           {
             "filters": {
@@ -477,7 +479,7 @@
                 }
               ]
             },
-            "max_dist": 20,
+            "max_dist": 200,
             "must_see": false
           },
           {
@@ -487,7 +489,7 @@
                 { "test": "in_water", "subject": "other", "operator": "!=", "value": true }
               ]
             },
-            "max_dist": 20
+            "max_dist": 200
           }
         ]
       },
