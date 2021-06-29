@@ -7,11 +7,11 @@
       "is_summonable": true,
       "is_experimental": false
     },
-
+ 
     "component_groups": {
       "scale_small": {
         "minecraft:scale": {
-          "value": 0.5
+          "value": 4
         },
 
         "minecraft:health": {
@@ -24,12 +24,12 @@
       },
       "scale_normal": {
         "minecraft:scale": {
-          "value": 1
+          "value": 5
         },
 
         "minecraft:health": {
-          "value": 6,
-          "max": 6
+          "value": 10,
+          "max": 10
         },
         "minecraft:loot": {
           "table": "loot_tables/entities/salmon_normal.json"
@@ -38,11 +38,11 @@
 
       "scale_large": {
         "minecraft:scale": {
-          "value": 1.5
+          "value": 6
         },
         "minecraft:health": {
-          "value": 6,
-          "max": 6
+          "value": 15,
+          "max": 15
         },
         "minecraft:loot": {
           "table": "loot_tables/entities/salmon_large.json"
@@ -66,7 +66,7 @@
       "minecraft:breathable": {
         "total_supply": 15,
         "suffocate_time": 0,
-        "breathes_air": false,
+        "breathes_air": true,
         "breathes_water": true
       },
       "minecraft:hurt_on_condition": {
@@ -79,18 +79,30 @@
         ]
       },
       "minecraft:movement": {
-        "value": 0.12
+        "value": 0.15
       },
       "minecraft:underwater_movement": {
-        "value": 0.12
+        "value": 0.5
       },
       "minecraft:navigation.generic": { // Allows the mob to go through water
-        "is_amphibious": false,
+        "is_amphibious": true,
         "can_path_over_water": false,
         "can_swim": true,
-        "can_walk": false,
+        "can_walk": true,
         "can_breach": false,
         "can_sink": false
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true
+      },
+      "minecraft:movement.basic": {
+
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:can_climb": {
       },
       "minecraft:movement.sway": {
         "sway_amplitude": 0.0
