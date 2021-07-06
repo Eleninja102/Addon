@@ -144,21 +144,21 @@
         "minecraft:attack": {
           "damage": 10,
           "effect_name": "nausea",
-          "effect_duration": 100000
+          "effect_duration": 1000
         }
-      },
+      }, 
       "minecraft:spider_poison_normal": {
         "minecraft:attack": {
           "damage": 10,
           "effect_name": "nausea",
-          "effect_duration": 100000
+          "effect_duration": 1000
         }
       },
       "minecraft:spider_poison_hard": {
         "minecraft:attack": {
           "damage": 10,
           "effect_name": "nausea",
-          "effect_duration": 100000
+          "effect_duration": 1000
         }
       }
     },
@@ -186,8 +186,8 @@
         "height": 0.5
       },
       "minecraft:health": {
-        "value": 12,
-        "max": 12
+        "value": 25,
+        "max": 25
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -199,7 +199,7 @@
         ]
       },
       "minecraft:movement": {
-        "value": 2
+        "value": 1.2
       },
       "minecraft:navigation.climb": {
         "can_path_over_water": true
@@ -209,6 +209,12 @@
       "minecraft:jump.static": {
       },
       "minecraft:can_climb": {
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "fall",
+          "deals_damage": false
+        }
       },
       "minecraft:despawn": {
         "despawn_from_distance": {}
