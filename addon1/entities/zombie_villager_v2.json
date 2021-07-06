@@ -333,11 +333,9 @@
         "width": 0.6,
         "height": 1.9
       },
-      "minecraft:burns_in_daylight": {},
-
       "minecraft:health": {
-        "value": 20,
-        "max": 20
+        "value": 50,
+        "max": 50
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -349,7 +347,9 @@
         ]
       },
       "minecraft:attack": {
-        "damage": 3
+        "damage": 4,   
+        "effect_name": "blindness", 
+        "effect_duration": 30
       },
       "minecraft:nameable": {
       },
