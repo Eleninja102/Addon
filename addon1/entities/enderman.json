@@ -159,10 +159,10 @@
         "priority": 3
       },
       "minecraft:behavior.enderman_leave_block": {
-        "priority": 10
+        "priority": 2
       },
       "minecraft:behavior.enderman_take_block": {
-        "priority": 11
+        "priority": 1
       },
       "minecraft:physics": {
       },
