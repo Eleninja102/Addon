@@ -355,15 +355,15 @@
             "normal_attack": {
                 "minecraft:attack": {
                     "damage": 2,
-                    "effect_name": "poison",
+                    "effect_name": "fatal_poison",
                     "effect_duration": 10
                 }
             },
             "hard_attack": {
                 "minecraft:attack": {
                     "damage": 2,
-                    "effect_name": "poison",
-                    "effect_duration": 18
+                    "effect_name": "fatal_poison",
+                    "effect_duration": 20
                 }
             },
             "default_sound" : {
@@ -372,8 +372,7 @@
                     "range" : 0.0,
                     "value" : 0.0
                 }
-            }
-        },
+            },
         "components": {
             "minecraft:is_hidden_when_invisible": {
             },
