@@ -374,6 +374,13 @@
                 }
             },
         "components": {
+            "minecraft:rideable": {
+               "seat_count": 1,
+               "interact_text": "action.interact.mount",
+               "seats": {
+                 "position": [ 0.0, 0.63, 0.0 ]
+               }
+             },
             "minecraft:is_hidden_when_invisible": {
             },
             "minecraft:behavior.tempt": {
