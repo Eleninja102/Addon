@@ -54,7 +54,7 @@
       "jockey": {
         "minecraft:behavior.find_mount": {
           "priority": 1,
-          "within_radius": 16
+          "within_radius": 160
         }
       },
 
@@ -64,14 +64,8 @@
           "can_pass_doors": true,
           "can_open_doors": true,
           "avoid_water": true,
-          "avoid_sun": true
+          "avoid_sun": false
         },
-        "minecraft:behavior.flee_sun": {
-          "priority": 4,
-          "speed_multiplier": 1
-        }
-      },
-
       "to_villager": {
         "minecraft:transformation": {
           "into": "minecraft:villager",
@@ -240,11 +234,9 @@
         "width": 0.6,
         "height": 1.9
       },
-      "minecraft:burns_in_daylight": {},
-
       "minecraft:health": {
-        "value": 20,
-        "max": 20
+        "value": 50,
+        "max": 50
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -261,7 +253,9 @@
         ]
       },
       "minecraft:attack": {
-        "damage": 3
+        "damage": 4,   
+        "effect_name": "blindness", 
+        "effect_duration": 30
       },
       "minecraft:nameable": {
       },
@@ -508,7 +502,7 @@
         "priority": 6
       },
       "minecraft:behavior.equip_item": {
-        "priority": 3
+        "priority": 1
       },
       "minecraft:behavior.stomp_turtle_egg": {
         "priority": 4,
@@ -519,11 +513,11 @@
         "interval": 20
       },
       "minecraft:behavior.pickup_items": {
-        "priority": 8,
-        "max_dist": 3,
-        "goal_radius": 2,
-        "speed_multiplier": 1.0,
-        "pickup_based_on_chance": true,
+        "priority": 1,
+        "max_dist": 300,
+        "goal_radius": 20,
+        "speed_multiplier": 0.0,
+        "pickup_based_on_chance": false,
         "can_pickup_any_item": true
       },
       "minecraft:behavior.random_stroll": {
@@ -566,7 +560,7 @@
                 }
               ]
             },
-            "max_dist": 35
+            "max_dist": 350
           },
           {
             "filters": {
@@ -583,7 +577,7 @@
                 }
               ]
             },
-            "max_dist": 35,
+            "max_dist": 350,
             "must_see": false
           },
           {
@@ -602,7 +596,7 @@
                 }
               ]
             },
-            "max_dist": 35
+            "max_dist": 350
           }
         ]
       },
