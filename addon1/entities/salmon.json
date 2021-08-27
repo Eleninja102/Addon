@@ -92,11 +92,6 @@
         "can_breach": false,
         "can_sink": false
       },
-      "minecraft:navigation.walk": {
-        "can_path_over_water": true,
-        "avoid_water": true,
-        "avoid_damage_blocks": true
-      },
       "minecraft:movement.basic": {
 
       },
@@ -108,7 +103,7 @@
         "sway_amplitude": 0.0
       },
       "minecraft:physics": {
-        "has_gravity": false
+        "has_gravity": true
       },
       "minecraft:pushable": {
         "is_pushable": true,
